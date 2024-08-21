@@ -61,7 +61,7 @@ switch CaseTest
 
         else
 
-            print("Something went wrong. You somehow modded a whole number out by 2 and didn't get 0 or 1")
+            print("Something went wrong. Did Vertical (mod 2) and did not get 0 or 1.")
             quit
 
         end
@@ -89,7 +89,7 @@ switch CaseTest
 
         else
 
-            print("Something went very wrong. How did you do this? You have a non-positive vertical length or a decimal vertical.")
+            print("Something went wrong. Vertical was not a positive integer.")
             quit
 
         end
@@ -108,7 +108,7 @@ switch CaseTest
 
         else
 
-            print("Somehow you broke it. the vertical should only be able to be a positive integer.")
+            print("Something went wrong. Vertical was not a positive integer.")
             quit
 
         end
