@@ -21,10 +21,6 @@ function ToLPMat = genLPgeneral(Polyominoes, PolyominoCount, Board, fileLocation
 %   found at https://people.math.sc.edu/Burkardt/m_src/polyominoes/polyomino_lp_write.html
 
 
-%Plan: First find all rotations/reflections of each polyomino, probably
-%store them as vectors not matrices, then start placing them on the board.
-%Save the working ones, then build matrix, then make LP file.
-
 %Assuming board is 1 where you can place 0 where you can't
 
 BoardH = size(Board,1);
@@ -58,8 +54,6 @@ CurLen = size(CurPoly,3);
         PossPlaceNum = (BoardH - CurH + 1 ) * (BoardW - CurW + 1);
 
         if (PossPlaceNum <= 0)
-
-         %   RCount(i) = RCount(i) + 1;
 
         else
 
