@@ -7,6 +7,6 @@ function PolyominoLimitVector = PolyominoLimit
 %   in Polyominoes.m you wish to allow.
 
 
-PolyominoLimitVector = ones(1,12);
+PolyominoLimitVector = 10;
 
 end
