@@ -5,7 +5,7 @@ import SectionSizeGenerator
 
 #Template to solve all VxH boards with N blockers using PolyominoCount number of polyominoes from Polyominoes
 
-#Make sure to change lines 22, 26, and 27 in SymmetrySolverGeneral.py to your desired folder locations.
+#Make sure to change lines 24, 28, and 29 in SymmetrySolverGeneral.py to your desired folder locations.
 
 eng = matlab.engine.start_matlab()
 eng.cd(r'<Matlab Code Folder Location>', nargout=0)
