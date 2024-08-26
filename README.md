@@ -10,8 +10,8 @@ In PolyominoLimit.m, use PolyominoLimitVector = zeroes(1,r);, then set Polyomino
 
 Now, run SolverTemplate.py.
 
-
-
+-------------------------------------------------------------------------------------
+Code Description
 
 
 SolverTemplate is a template for using this code on an  m x n  board with r blockers and a set of polyominoes. It uses all of the other files to accomplish this.
