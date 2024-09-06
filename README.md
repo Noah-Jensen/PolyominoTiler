@@ -13,6 +13,9 @@ In PolyominoLimit.m, use PolyominoLimitVector = zeroes(1,r);, then set Polyomino
 Now, run SolverTemplate.py.
 
 ------------------------------------------------------------------------------------
+To run BurnsideCalculator, there is an example piece of code at the bottom of the BurnsideCalculator.py file. All you need to do is run BurnsideCalculator(m,n,r) for B(m,n;r).
+
+------------------------------------------------------------------------------------
 ## Code Description
 
 
@@ -28,3 +31,5 @@ SymmetrySolverGeneral contains functions which generate and solve LP files to de
 blockerBoard, genLPgeneral, SectionBuilder, and SectionGenerator are all used by SymmetrySolverGeneral.
 
 The file polyomino_lp_write.m is not included here, but is necessary for genLPgeneral to work. It is written by John Burkardt and can be found at https://people.math.sc.edu/Burkardt/m_src/polyominoes/polyomino_lp_write.html
+
+BurnsideCalculator uses the formulas from the paper to count the number of equivalence classes that would give the minimum number of boards to have a solution to every board.
