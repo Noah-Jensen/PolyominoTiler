@@ -197,4 +197,4 @@ def BurnsideCalculator(Horizontal,Vertical,BlockerNumber):
 
     return equivClassNum
 
-#print(BurnsideCalculator(5,7,5)) count for burnside count for 5 x 7 with 5 blockers.
+#print(BurnsideCalculator(5,7,5)) Burnside count for a 5 x 7 board with 5 blockers.
