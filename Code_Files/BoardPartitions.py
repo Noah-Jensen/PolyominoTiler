@@ -100,7 +100,7 @@ def Partitioner (Vertical, Horizontal, NumberBlockers):
                 elif ((BoardP[0]==BoardP[1]) and (BoardP[2]<BoardP[3])):
                     pass
                 else:
-                    BoardPartitions.append(copy.copy(BoardP))
+                    yield BoardP
         
         else: 
             for BoardP in PossiblePartitions(4,[0,0,0,0],NumberBlockers):
@@ -115,7 +115,7 @@ def Partitioner (Vertical, Horizontal, NumberBlockers):
                 elif((BoardP[0]==BoardP[3]) and (BoardP[1]<BoardP[2])):
                     pass
                 else:
-                    BoardPartitions.append(copy.copy(BoardP))
+                    yield BoardP
 
     elif(NumberSections==9): #OddOdd Board
 
@@ -148,7 +148,7 @@ def Partitioner (Vertical, Horizontal, NumberBlockers):
                 elif((((BoardP[0]==BoardP[2]) and (BoardP[1]==BoardP[3])) and ((BoardP[4]!=Strips) or ((BoardP[4]==BoardP[5]) and (BoardP[6]<BoardP[7])) or ((BoardP[4]==BoardP[6]) and (BoardP[5]<BoardP[7])) or ((BoardP[4]==BoardP[7]) and (BoardP[5]<BoardP[6]))))):
                     pass
                 else:
-                    BoardPartitions.append(copy.copy(BoardP))
+                    yield BoardP
 
         else:
             for BoardP in PossiblePartitions(9,[0,0,0,0,0,0,0,0,0],NumberBlockers):
@@ -172,7 +172,7 @@ def Partitioner (Vertical, Horizontal, NumberBlockers):
                 elif((BoardP[0]==BoardP[3]) and ((BoardP[1]<BoardP[2]) or ((BoardP[1]==BoardP[2]) and (BoardP[4]<BoardP[6])))):
                     pass
                 else:
-                    BoardPartitions.append(copy.copy(BoardP))
+                    yield BoardP
 
     elif(NumberSections==6): #EvenOdd Board
         for BoardP in PossiblePartitions(6,[0,0,0,0,0,0],NumberBlockers):
@@ -193,7 +193,7 @@ def Partitioner (Vertical, Horizontal, NumberBlockers):
             elif((BoardP[0]==BoardP[3]) and ((BoardP[1]<BoardP[2]) or ((BoardP[1]==BoardP[2]) and (BoardP[4]<BoardP[5])))):
                 pass
             else:
-                BoardPartitions.append(copy.copy(BoardP))
+                yield BoardP
 
     elif(NumberSections==3):
 
@@ -205,7 +205,7 @@ def Partitioner (Vertical, Horizontal, NumberBlockers):
             elif(BoardP[1]>BoardP[0]):
                 pass
             else:
-                BoardPartitions.append(copy.copy(BoardP))
+                yield BoardP
 
     elif(NumberSections==2):
 
@@ -215,9 +215,7 @@ def Partitioner (Vertical, Horizontal, NumberBlockers):
             elif(BoardP[1]>BoardP[0]):
                 pass
             else:
-                BoardPartitions.append(copy.copy(BoardP))
+                yield BoardP
 
     else:
         pass
-
-    return BoardPartitions
