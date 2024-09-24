@@ -2,14 +2,14 @@
 
 def SectionSizeGenerator(BoardVertical,BoardHorizontal):
     
-    VerticalHalf = (BoardVertical - (BoardVertical % 2))/2
-    HorizontalHalf = (BoardHorizontal - (BoardHorizontal % 2))/2
+    VerticalHalf = int((BoardVertical - (BoardVertical % 2))/2)
+    HorizontalHalf = int((BoardHorizontal - (BoardHorizontal % 2))/2)
 
     CornerSection = [VerticalHalf,HorizontalHalf]
 
-    VerticalMiddleSection = [VerticalHalf,BoardHorizontal % 2]
-    HorizontalMiddleSection = [BoardVertical % 2,HorizontalHalf]
-    Center = [BoardVertical % 2,BoardHorizontal % 2]
+    VerticalMiddleSection = [VerticalHalf,int(BoardHorizontal % 2)]
+    HorizontalMiddleSection = [int(BoardVertical % 2),HorizontalHalf]
+    Center = [int(BoardVertical % 2),int(BoardHorizontal % 2)]
 
     SectionSizes = [CornerSection,CornerSection,CornerSection,CornerSection,VerticalMiddleSection,HorizontalMiddleSection,VerticalMiddleSection,HorizontalMiddleSection,Center]
 
