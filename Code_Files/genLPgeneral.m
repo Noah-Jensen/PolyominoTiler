@@ -128,6 +128,8 @@ sumPCount = cumsum(PCount);
 
 Spaces = [ 0 sumPCount(1:(end)-1) ];
 
+ListCount = 0;
+
 for i = 1 : PNum
 
     for j = 1 : PCount(i)
@@ -140,7 +142,9 @@ for i = 1 : PNum
 
         else
 
-        SubstituteArrays{CurrentSpot} = PlacementArrays{CurrentSpot};
+            ListCount = ListCount + 1;
+
+            SubstituteArrays{CurrentSpot} = PlacementArrays{ListCount};
 
         end
 
@@ -188,11 +192,15 @@ for i = 1 : SymLen
 
     for j = 1 : size(PlacementArrays{i},3)
 
-        PlacementArrays{i}(:,:,j);
+        if (isempty(PlacementArrays{i}(:,:,j))
 
-        ToLPMat(1:BSCount,BigLoc) = reshape(PlacementArrays{i}(:,:,j)',[],1);
+        else
+    
+            ToLPMat(1:BSCount,BigLoc) = reshape(PlacementArrays{i}(:,:,j)',[],1);
+    
+            BigLoc = BigLoc + 1;
 
-        BigLoc = BigLoc + 1;
+        end
 
     end
 
