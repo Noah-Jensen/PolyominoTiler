@@ -11,8 +11,19 @@ if (iscell(BlockerPos))
 
 end
 
+Len = length(BlockerPos);
+
+Positions = zeros(Len/2, 2);
+
+Positions(:,1) = BlockerPos(1 : 2 : Len - 1);
+Positions(:,2) = BlockerPos(2 : 2 : Len);
+
 Board = ones(Height,Width);
 
-Board(BlockerPos) = 0;
+for i = 1 : (Len / 2)
+
+    Board(Positions(i,1),Positions(i,2)) = 0;
+
+end
 
 end
