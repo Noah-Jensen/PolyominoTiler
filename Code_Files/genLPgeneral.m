@@ -36,6 +36,8 @@ ShiftVec = zeros(1,8 * PNum);
 
 PCount = zeros(1,PNum);
 
+Unplaceable = [];
+
 for i = 1 : PNum
 
 CurPoly = RotRefPoly(Polyominoes(:,:,i));
@@ -52,6 +54,8 @@ CurLen = size(CurPoly,3);
         CurW = size(CurRotRef,2);
 
         PossPlaceNum = (BoardH - CurH + 1 ) * (BoardW - CurW + 1);
+
+        EmptyCheck = 0;
 
         if (PossPlaceNum <= 0)
 
@@ -78,6 +82,8 @@ CurLen = size(CurPoly,3);
 
             if (isempty(find(Checker==2)))
 
+                EmptyCheck = EmptyCheck + 1;
+
                 PlacementArrays{8*(i-1) + j}(:,:,(k - Shift)) = CheckPlace;
 
             else
@@ -94,6 +100,16 @@ CurLen = size(CurPoly,3);
 
         end
 
+        if (EmptyCheck == 0)
+
+            Unplaceable = [Unplaceable 1];
+
+        else
+
+            Unplaceable = [Unplaceable 0];
+
+        end
+
     end
 
 end
@@ -103,6 +119,36 @@ nList2 = zeros(1,PNum);
 PlacementArrays = PlacementArrays(~cellfun(@isempty,PlacementArrays));
 
 SymLen = length(PlacementArrays);
+
+TotalUnplaceable = sum(Unplaceable);
+
+SubstituteArrays = cell(1, (size(PlacementArrays,2) + TotalUnplaceable));
+
+sumPCount = cumsum(PCount);
+
+Spaces = [ 0 sumPCount(1:(end)-1) ];
+
+for i = 1 : PNum
+
+    for j = 1 : PCount(i)
+
+        CurrentSpot = Spaces(i) + j;
+
+        if (Unplaceable(CurrentSpot) == 1)
+
+            SubstituteArrays{CurrentSpot} = {};
+
+        else
+
+        SubstituteArrays{CurrentSpot} = PlacementArrays{CurrentSpot};
+
+        end
+
+    end
+
+end
+
+PlacementArrays = SubstituteArrays;
 
 nList = cellfun('size',PlacementArrays,3);
 
