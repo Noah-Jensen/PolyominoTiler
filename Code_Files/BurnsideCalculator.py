@@ -196,5 +196,3 @@ def BurnsideCalculator(Horizontal,Vertical,BlockerNumber):
         raise ValueError('BoardType returned an invalid board type, meaning the Horizontal and Vertical input values were not natural numbers greater than 0')
 
     return equivClassNum
-
-#print(BurnsideCalculator(5,7,5)) Burnside count for a 5 x 7 board with 5 blockers.
