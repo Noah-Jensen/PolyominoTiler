@@ -30,6 +30,8 @@ SymmetrySolverGeneral contains functions which generate and solve LP files to de
 
 blockerBoard, genLPgeneral, SectionBuilder, and SectionGenerator are all used by SymmetrySolverGeneral.
 
+RotRefPoly is used by genLPgeneral to generate the distinct symmetries of a polyomino.
+
 The file polyomino_lp_write.m is not included here, but is necessary for genLPgeneral to work. It is written by John Burkardt and can be found at https://people.math.sc.edu/Burkardt/m_src/polyominoes/polyomino_lp_write.html
 
 BurnsideCalculator uses the formulas from the paper to count the number of equivalence classes that would give the minimum number of boards to have a solution to every board.
