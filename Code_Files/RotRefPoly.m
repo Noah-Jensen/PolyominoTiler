@@ -1,21 +1,14 @@
 function SymList = RotRefPoly(P)
 %SymList = RotRefPoly(P)
-%   Detailed explanation goes here
-
-debug = false;
-
-%Resize PolyMat to be safe
-% H = find(any(P));
-% V = find(any(P,2));
-
-%Hlen = max(H) - min(H) + 1;
-%Vlen = max(V) - min(V) + 1;
-
-PP = P;
+%
+%  P is a particular polyomino matrix
+%  
+%  This function will take in a matrix that represents a polyomino, then
+%  return a list of matrices corresponding to all of the unique reflections
+%  and rotations of that polyomino.
 
 P(:,all(~P,1)) = [];
 P(all(~P,2),:)= []; 
-%P = PP(V(1):V(end),H(1):H(end));
 
 dimens = [size(P,1) size(P, 2)];
 
@@ -56,12 +49,6 @@ for j = 1 : 7
 
     tempLog = find ( Inset );
 
-    if (debug)
-    
-        disp('remove duplicates')
-
-    end
-
     Placeholder(:,:,tempLog) = zeros(dimens(1),dimens(1),length(tempLog));
     
     Sloc = find( sum( sum( Placeholder(:,:,(j:end)), 1 ), 2 ) );
@@ -76,24 +63,12 @@ for j = 1 : 7
 
     Placeholder(:,:,j:(j+(LSloc-1))) = Placeholder(:,:,(Sloc + (j-1)));
 
-    if (debug)
-
-    disp('zeros')
-
-    end
-
     Placeholder(:,:,(j+LSloc):end) = zeros(dimens(1),dimens(1),9-(j+LSloc));
 
 
 tripSum = sum(sum(sum(Placeholder(:,:,(j+1):end),1),2),3) == zeros(1,8-j);
 
 if ((isequal(Placeholder(:,:,j+1),zeros(dimens(1)))) && (isequal(tripSum,true(1,length(tripSum)))))
-
-    if (debug)
-
-        disp('this should break')
-
-    end
 
 break;
 
@@ -106,9 +81,6 @@ Nloc = find( sum( sum( Placeholder, 1), 2 ) )';
 SymList = Placeholder(:,:,Nloc);
 
 else
-
-%Placeholder1 = zeros(dimens(1),dimens(2),4);
-%Placeholder2 = Placeholder1;
 
 Placeholder1 = PH1;
 Placeholder2 = PH2;
@@ -131,31 +103,13 @@ for j = 1 : 3
 
     tempLog = find ( Inset );
 
-    if (debug)
-    
-        disp('remove duplicates')
-
-    end
-
     Placeholder1(:,:,tempLog) = zeros(dimens(1),dimens(2),length(tempLog));
     
     Sloc = find( sum( sum( Placeholder1(:,:,(j:end)), 1 ), 2 ) );
     
     LSloc = length(Sloc);
 
-    if (debug)
-
-    disp('consolidate')
-
-    end
-
     Placeholder1(:,:,j:(j+(LSloc-1))) = Placeholder1(:,:,(Sloc + (j-1)));
-
-    if (debug)
-
-    disp('zeros')
-
-    end
 
     Placeholder1(:,:,(j+LSloc):end) = zeros(dimens(1),dimens(2),5-(j+LSloc));
 
@@ -164,11 +118,6 @@ tripSum = sum(sum(sum(Placeholder1(:,:,(j+1):end),1),2),3) == zeros(1,4-j);
 
 if ((isequal(Placeholder1(:,:,j+1),zeros(dimens(1),dimens(2)))) && (isequal(tripSum,true(1,length(tripSum)))))
 
-    if (debug)
-    
-    disp('this should break')
-
-    end
     break;
 
 end
@@ -193,31 +142,13 @@ for j = 1 : 3
 
     tempLog = find ( Inset );
 
-    if (debug)
-    
-        disp('remove duplicates')
-
-    end
-
     Placeholder2(:,:,tempLog) = zeros(dimens(2),dimens(1),length(tempLog));
     
     Sloc = find( sum( sum( Placeholder2(:,:,(j:end)), 1 ), 2 ) );
     
     LSloc = length(Sloc);
 
-    if (debug)
-
-    disp('consolidate')
-
-    end
-
     Placeholder2(:,:,j:(j+(LSloc-1))) = Placeholder2(:,:,(Sloc + (j-1)));
-
-    if (debug)
-
-    disp('zeros')
-
-    end
 
     Placeholder2(:,:,(j+LSloc):end) = zeros(dimens(2),dimens(1),5-(j+LSloc));
 
@@ -226,11 +157,6 @@ tripSum = sum(sum(sum(Placeholder2(:,:,(j+1):end),1),2),3) == zeros(1,4-j);
 
 if ((isequal(Placeholder2(:,:,j+1),zeros(dimens(2),dimens(1)))) && (isequal(tripSum,true(1,length(tripSum)))))
 
-    if (debug)
-
-    disp('this should break')
-
-    end
     break;
 
 end
