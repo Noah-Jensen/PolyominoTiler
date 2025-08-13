@@ -1,0 +1,206 @@
+List of Rectangle Side Lengths, Number of Blockers, and Ratios R(m,n;r):
+
+Side Lengths: 2 x 0
+Number of Blockers | Ratio
+
+
+Side Lengths: 2 x 1
+Number of Blockers | Ratio
+1 | 1.0
+
+
+Side Lengths: 3 x 0
+Number of Blockers | Ratio
+
+
+Side Lengths: 3 x 1
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.0
+
+
+Side Lengths: 3 x 2
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.0
+3 | 1.0
+
+
+Side Lengths: 4 x 0
+Number of Blockers | Ratio
+
+
+Side Lengths: 4 x 1
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.25
+
+
+Side Lengths: 4 x 2
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.3
+3 | 1.0
+4 | 1.4090909090909092
+
+
+Side Lengths: 4 x 3
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.1818181818181819
+3 | 1.0666666666666667
+4 | 1.1942446043165467
+5 | 1.0769230769230769
+6 | 1.2142857142857142
+
+
+Side Lengths: 5 x 0
+Number of Blockers | Ratio
+
+
+Side Lengths: 5 x 1
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.1666666666666667
+3 | 1.1666666666666667
+
+
+Side Lengths: 5 x 2
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.2
+3 | 1.0625
+4 | 1.2
+5 | 1.0909090909090908
+
+
+Side Lengths: 5 x 3
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.1176470588235294
+3 | 1.0852713178294573
+4 | 1.1024258760107817
+5 | 1.0869017632241813
+6 | 1.0908396946564884
+7 | 1.0877611940298508
+8 | 1.0877611940298508
+
+
+Side Lengths: 5 x 4
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.3392857142857142
+3 | 1.0816326530612246
+4 | 1.2529928172386273
+5 | 1.0828220858895705
+6 | 1.1980016313213704
+7 | 1.0733662145499383
+8 | 1.1745410963224627
+9 | 1.0680976351030487
+10 | 1.1690492593868411
+
+
+Side Lengths: 6 x 0
+Number of Blockers | Ratio
+
+
+Side Lengths: 6 x 1
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.3333333333333333
+3 | 1.0
+
+
+Side Lengths: 6 x 2
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.4285714285714286
+3 | 1.0
+4 | 1.4666666666666666
+5 | 1.0
+6 | 1.4390243902439024
+
+
+Side Lengths: 6 x 3
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.25
+3 | 1.0825688073394495
+4 | 1.2250922509225093
+5 | 1.0846994535519126
+6 | 1.2020138451856515
+7 | 1.0810408921933086
+8 | 1.1847562617829248
+9 | 1.0790243902439025
+
+
+Side Lengths: 6 x 4
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.5769230769230769
+3 | 1.0
+4 | 1.4656319290465631
+5 | 1.0
+6 | 1.3721831194179925
+7 | 1.0
+8 | 1.3231400517805676
+9 | 1.0
+10 | 1.2986506636681414
+11 | 1.0
+12 | 1.2913856593156523
+
+
+Side Lengths: 6 x 5
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.3902439024390243
+3 | 1.0867052023121386
+4 | 1.2574257425742574
+5 | 1.0787995640875179
+6 | 1.1823525859118635
+7 | 1.0660481763168428
+8 | 1.1451990392549927
+9 | 1.0574198269832669
+10 | 1.125516073058741
+11 | 1.052360700508564
+12 | 1.1147075984420636
+13 | 1.0497845275158317
+14 | 1.1098039982408672
+15 | 1.049013086450768
+
+
+Side Lengths: 7 x 0
+Number of Blockers | Ratio
+
+
+Side Lengths: 7 x 1
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.25
+3 | 1.1578947368421053
+4 | 1.1578947368421053
+
+
+Side Lengths: 7 x 2
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.3214285714285714
+3 | 1.0638297872340425
+4 | 1.2706766917293233
+5 | 1.0826771653543308
+6 | 1.22007722007722
+7 | 1.0829493087557605
+
+
+Side Lengths: 7 x 3
+Number of Blockers | Ratio
+1 | 1.0
+2 | 1.1846153846153846
+3 | 1.1074380165289257
+4 | 1.1410419313850064
+5 | 1.0986427069393998
+6 | 1.1061044409084333
+7 | 1.08667753106539
+8 | 1.0861344537815125
+9 | 1.078591663294213
+10 | 1.07785151856018
