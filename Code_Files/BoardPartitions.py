@@ -1,4 +1,4 @@
-#Possible partitions creates n-tuples with a particular sum of entries.
+#PossiblePartitions creates n-tuples with a particular sum of entries.
 #Partitioner takes in the sizes of the board (Vertical then Horizontal) and the number of blockers. 
 #   After some set up it goes into if statements for each case determined in the paper. Then it uses PossiblePartitions
 #   to generate a list of n-tuples and throws out those which fail the conditions for a particular board type
@@ -219,3 +219,4 @@ def Partitioner (Vertical, Horizontal, NumberBlockers):
 
     else:
         pass
+
