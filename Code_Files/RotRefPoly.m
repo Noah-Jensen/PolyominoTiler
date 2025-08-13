@@ -55,12 +55,6 @@ for j = 1 : 7
     
     LSloc = length(Sloc);
 
-    if (debug)
-
-    disp('consolidate')
-
-    end
-
     Placeholder(:,:,j:(j+(LSloc-1))) = Placeholder(:,:,(Sloc + (j-1)));
 
     Placeholder(:,:,(j+LSloc):end) = zeros(dimens(1),dimens(1),9-(j+LSloc));
@@ -181,3 +175,4 @@ SymList(1:dimens(2),1:dimens(1),(L1+1):end) = Placeholder2(:,:,Nloc2);
 end
 
 end
+
